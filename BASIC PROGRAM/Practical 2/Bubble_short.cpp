@@ -37,10 +37,28 @@ void bubbleSort(int arr[], int n)
 // Driver program to test above functions
 int main()
 {
-    int arr[] = {75, 34, 61, 10, 9, 83, 62};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    bubbleSort(arr, n);
-    cout << "Sorted array: " << endl;
-    printArray(arr, n);
+    int arreaySize_input;
+
+    cout << "Enter the size of array: " << endl;
+    cin >> arreaySize_input;
+
+    int array[arreaySize_input];
+    int i;
+    cout << "Enter the array elements " << endl;
+    for (i = 0; i < arreaySize_input; i++)
+    {
+        cin >> array[i];
+    }
+
+    cout << "The array elements are: ";
+    for (i = 0; i < arreaySize_input; i++)
+    {
+        int arr = array[i];
+        int n = sizeof(array) / sizeof(array[i]);
+        bubbleSort(array, n);
+        cout << "Sorted array: " << endl;
+        printArray(array, n);
+    }
+    cout << endl;
     return 0;
 }
